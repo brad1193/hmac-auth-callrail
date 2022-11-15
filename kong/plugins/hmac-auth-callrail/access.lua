@@ -24,7 +24,7 @@ end
 local function validate_signature(hmac)
   local signature_1 = generate_sha1_hmac()
   local signature_2 = decode_base64(get_signature())
-  if not signature_1 == signature_2
+  if not signature_1 == signature_2 then
     return false, { status = 401, message = SIGNATURE_NOT_VALID }
   end
 end
