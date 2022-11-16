@@ -1,8 +1,11 @@
 return {
-  name: "hmac-auth-callrail",
+  name = "hmac-auth-callrail",
   fields = {
-    config = {
-      { secret = { type = "string }, },
-    },
+    { config = {
+      type = "record",
+      fields = {
+      { secret = { type = "string" }, },
+      },
+    }, },
   },
 }
